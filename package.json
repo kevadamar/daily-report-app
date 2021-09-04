@@ -1,0 +1,54 @@
+{
+  "name": "daily_report",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Keva Damar Galih",
+    "email": "kevadamarg@gmail.com"
+  },
+  "description": "Absensi & Daily Report JNE berbasis Mobile menggunakan React Native",
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios --simulator=\"iPhone 11\"",
+    "start": "react-native start",
+    "clean": "cd android/ && ./gradlew clean && cd ..",
+    "prebuild": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "build-apk": "cd android/ && ./gradlew assembleDebug && cd ..",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.7",
+    "@react-native-masked-view/masked-view": "^0.2.6",
+    "@react-native-picker/picker": "^1.16.7",
+    "@react-navigation/bottom-tabs": "^6.0.5",
+    "@react-navigation/material-top-tabs": "^6.0.2",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/native-stack": "^6.1.0",
+    "axios": "^0.21.2",
+    "react": "17.0.2",
+    "react-native": "0.65.1",
+    "react-native-calendars": "^1.1266.0",
+    "react-native-image-crop-picker": "^0.36.2",
+    "react-native-linear-gradient": "^2.5.6",
+    "react-native-pager-view": "^5.4.1",
+    "react-native-safe-area-context": "^3.3.1",
+    "react-native-screens": "^3.6.0",
+    "react-native-tab-view": "^3.1.1",
+    "react-native-vector-icons": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-native-codegen": "^0.0.7",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
